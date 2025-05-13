@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Produtos</title>
+  <link rel="stylesheet" href="/Assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Produtos no Estoque</h1>
+    
+    <!-- Campo de pesquisa -->
+    <div class="search-container">
+      <input type="text" id="pesquisar" placeholder="Pesquisar por nome..." oninput="filtrarProdutos()">
+    </div>
+
+    <!-- Lista de produtos -->
+    <div id="produtos-lista">
+      <!-- Os produtos serão inseridos aqui pelo JavaScript -->
+    </div>
+
+    <br>
+    <button onclick="window.location.href='index.html'">Voltar à Home</button>
+  </div>
+
+  <script src="/Assets/scripts/lista.js"></script>
+</body>
+</html>

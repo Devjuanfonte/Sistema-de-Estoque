@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Container central para todas as páginas */
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Ajusta o tamanho máximo do container */
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Títulos */
+h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Botões */
+button {
+  margin: 10px 0;
+  padding: 10px 20px; /* Ajusta o preenchimento */
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s;
+  width: auto; /* Retirado o width 100% para deixar o botão de tamanho natural */
+  max-width: 200px; /* Limita o tamanho máximo do botão */
+  text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo de formulário */
+form {
+  width: 100%;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Estilo para o container de sugestões */
+.sugestoes {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  display: none; /* Inicialmente escondido */
+}
+
+.sugestao-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sugestao-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilização da Lista de Produtos */
+#produtos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  width: 70vw; /* Definindo a largura da lista para 70% da tela */
+  margin-left: auto;
+  margin-right: auto; /* Centraliza o container na tela */
+  max-width: 700px; /* Tamanho máximo da lista */
+}
+
+.produto-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Garantir que ocupe toda a largura do container */
+}
+
+.produto-nome {
+  font-weight: bold;
+  font-size: 18px;
+  flex-grow: 1; /* Permite que o nome ocupe o espaço restante */
+}
+
+.produto-quantidade {
+  font-size: 16px;
+  color: #007BFF;
+  flex-shrink: 0; /* Evita que a quantidade encolha */
+}
+
+/* Botão de Expandir Histórico */
+button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Estilos para o histórico de cada produto */
+.historico {
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 4px solid #007BFF;
+  margin-bottom: 15px;
+}
+
+.historico-entry {
+  font-size: 14px;
+  color: #555;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.historico-entry:last-child {
+  border-bottom: none;
+}
+
+/* Estilos para o formulário de saída de produtos */
+#formSaida {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#formSaida .form-group {
+  margin-bottom: 20px;
+}
+
+#formSaida label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+#formSaida input, #formSaida select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+#formSaida input:focus, #formSaida select:focus {
+  border-color: #218838;
+  outline: none;
+}
+
+#formSaida button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #218838;
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+#formSaida button:hover {
+  background-color: #218838;
+}

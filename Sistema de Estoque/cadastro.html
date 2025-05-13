@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Produto</title>
+  <link rel="stylesheet" href="/Assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastrar Produto</h1>
+    <!-- Formulário de Cadastro de Produto -->
+    <form id="formCadastroProduto">
+      <div class="form-group">
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input type="text" id="nomeProduto" required autocomplete="off">
+        <!-- Div para sugestões -->
+        <div id="sugestoes" class="sugestoes"></div>
+      </div>
+      <div class="form-group">
+        <label for="marcaProduto">Marca:</label>
+        <input type="text" id="marcaProduto" required>
+      </div>
+      <div class="form-group">
+        <label for="quantidadeProduto">Quantidade:</label>
+        <input type="number" id="quantidadeProduto" required>
+      </div>
+      <div class="form-group">
+        <label for="dataRecebimento">Data de Recebimento:</label>
+        <input type="date" id="dataRecebimento" required>
+      </div>
+      <div class="form-group">
+        <label for="quemRecebeu">Quem Recebeu:</label>
+        <input type="text" id="quemRecebeu" required>
+      </div>
+      <button type="submit">Cadastrar Produto</button>
+    </form>
+    
+    <!-- Aqui estará a lista de produtos cadastrados -->
+    <div id="produtos-lista"></div>
+
+    <br>
+    <button onclick="window.location.href='index.html'">Voltar à Home</button>
+  </div>
+
+  <script src="/Assets/scripts/cadastro.js"></script>
+</body>
+</html>
